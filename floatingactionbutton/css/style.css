@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height:100vh;
+    margin:0;
+    overflow:hidden;
+}
+
+.btn-icon {
+    width:5rem;
+    height:5rem;
+    background-color: #eb0985;
+    color:#fff;
+    font-size: 1.5rem;
+    border-radius: 100%;
+    box-shadow: 0 3px 10px  rgba(0,0,0,0.1);
+    cursor:pointer;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom:1.5rem;
+    right:3rem;
+}
+
+.btns.show .btn-icon:nth-of-type(1) {
+    bottom: 7.3rem;
+    background-color: #110873;
+}
+
+
+.btns.show .btn-icon:nth-of-type(2) {
+    bottom: 13rem;
+    background-color: #0eb0eb;
+    transition-delay: 0.5s;
+}
+
+
+.btns.show .btn-icon:nth-of-type(3) {
+    bottom: 18.7rem;
+    background-color: #0eeb42;
+    transition-delay:1s;
+}
+
+
+.btns.show .btn-icon:nth-of-type(4) {
+    bottom:24.4rem;
+    background-color: #eb5f0e;
+    transition-delay:1.5s;
+}
+
+.btns .btn-icon {
+    width:4rem;
+    height:4rem;
+    font-size: 1rem;
+
+    right: 3.5em;
+}
+
+.btns + .btn-icon i{
+    animation:myani 2s linear infinite;
+}
+
+.btn-icon a {
+    text-decoration: none;
+    color:white;
+}
+
+.btns.show + .btn-icon i {
+    animation:myani 2s linear reverse infinite;
+}
+
+@keyframes myani {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform:rotate(1turn);
+    }
+}
